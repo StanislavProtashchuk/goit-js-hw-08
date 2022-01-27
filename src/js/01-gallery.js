@@ -18,4 +18,4 @@ function createGallery(galleryItems) {
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-let gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250});
+let gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250,});
