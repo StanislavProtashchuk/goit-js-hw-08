@@ -25,8 +25,7 @@ function onTextareaInput(e) {
 function onFormSubmit(e) {
     e.preventDefault();
     e.currentTarget.reset();
-    console.log(localStorage.getItem(STORAGE_EMAIL));
-    console.log(localStorage.getItem(STORAGE_MESSAGE));
+    console.log(`{email: ${localStorage.getItem(STORAGE_EMAIL)}, message: ${localStorage.getItem(STORAGE_MESSAGE)}}`);
     localStorage.removeItem(STORAGE_EMAIL);
     localStorage.removeItem(STORAGE_MESSAGE);    
 };
