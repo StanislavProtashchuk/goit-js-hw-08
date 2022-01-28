@@ -25,8 +25,10 @@ function onTextareaInput(e) {
 function onFormSubmit(e) {
     e.preventDefault();
     e.currentTarget.reset();
+    console.log(localStorage.getItem(STORAGE_EMAIL));
+    console.log(localStorage.getItem(STORAGE_MESSAGE));
     localStorage.removeItem(STORAGE_EMAIL);
-    localStorage.removeItem(STORAGE_MESSAGE);
+    localStorage.removeItem(STORAGE_MESSAGE);    
 };
 
 populateInput();
@@ -34,9 +36,7 @@ populateInput();
 function populateInput() {
     const savedMessage = localStorage.getItem(STORAGE_EMAIL);
     if (savedMessage) {
-        console.log(savedMessage);
         input.value = savedMessage;
-        
     }
 }
 
@@ -45,9 +45,7 @@ populateTextarea();
 function populateTextarea() {
     const savedMessage = localStorage.getItem(STORAGE_MESSAGE);
     if (savedMessage) {
-        console.log(savedMessage);
-        textarea.value = savedMessage;
-        
+        textarea.value = savedMessage;   
     }
 }
 
